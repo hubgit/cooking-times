@@ -20,8 +20,8 @@ var app = {
 		app.collections.vegetables.fetch({ key: key, sheet: "od6" });
 		app.collections.meats.fetch({ key: key, sheet: "od7" });
 
-		app.views.vegetables.$el.prepend("<h2>Vegetables</h2>");
-		app.views.meats.$el.prepend("<h2>Meats</h2>");
+		app.views.vegetables.$el.prepend("<h2>Vegetables <span class='help'>time in minutes</span></h2>");
+		app.views.meats.$el.prepend("<h2>Meats <span class='help'>time in minutes</span></h2>");
 	}
 }
 
