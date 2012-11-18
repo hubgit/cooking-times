@@ -26,11 +26,9 @@ var Views = {
 
 		render: function() {
 			var data = this.model.toJSON();
-			console.log(data.time);
 
 			var matches = data.time.match(/(\d+)(?:-\d+)? per (\d+)g/);
 			if (matches) {
-				console.log(matches);
 				data.calc = {
 					mins: matches[1],
 					weight: matches[2],
