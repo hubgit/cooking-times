@@ -36,6 +36,9 @@ var Views = {
 			}
 
 			this.$el.html(app.templates.food(data));
+
+			var time = this.$(".food-circle");
+			time.html(time.text().replace(/\n/, "<br>"));
 			return this;
 		}
 	})
