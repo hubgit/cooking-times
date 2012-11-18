@@ -1,0 +1,39 @@
+body {
+	font-family: sans-serif;
+}
+
+th, td {
+	padding: 5px 10px;
+	vertical-align: middle;
+}
+
+td {
+	text-align: left;
+}
+
+h2 {
+	margin: 10px 10px 0;
+}
+
+.foods {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.food-notes {
+	color: #777;
+	margin-left: 10px;
+}
+
+.food-time {
+	font-size: 15px;
+	padding: 5px;
+	border-radius: 40px;
+	background-color: #fe7;
+	vertical-align: middle;
+	text-align: center;
+}
+
+input[name="weight"] {
+	width: 5em;
+}

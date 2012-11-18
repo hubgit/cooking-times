@@ -1,0 +1,44 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<title>Cooking Times</title>
+
+<link rel="stylesheet" href="css/foods.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.rc.1.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+<script src="http://backbonejs.org/backbone.js"></script>
+
+<script src="js/models.js"></script>
+<script src="js/views.js"></script>
+<script src="js/app.js"></script>
+
+<script type="text/html" id="template-foods">
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>time (mins)</th>
+			</tr>
+		</thead>
+
+		<tbody></tbody>
+	</table>
+</script>
+
+<script type="text/html" id="template-food">
+	<td class="food-title">
+		<div class="food-name">{{name}}</div>
+		<div class="food-notes">{{notes}}</div>
+	</td>
+	<td class="food-time">{{time}}</td>
+	<td class="food-calculate">
+		{{#if calc}}
+		<form onsubmit="return false" oninput="time.value = Math.round((weight.valueAsNumber / {{calc.weight}}) * {{calc.mins}}) + ' min'">
+			<output name="time" for="weight">{{calc.mins}} min</output> for
+			<input name="weight" type="number" step="50" value="{{calc.weight}}"> g
+		</form>
+		{{/if}}
+	</td>
+</script>
