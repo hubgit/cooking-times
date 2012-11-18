@@ -32,8 +32,9 @@
 		<div class="food-name">{{name}}</div>
 		<div class="food-notes">{{notes}}</div>
 	</td>
-	<td class="food-time"><div class="food-circle">{{time}}</div></td>
-	<td class="food-calculate">
+	<td class="food-time">
+		<div class="food-circle">{{time}}</div>
+
 		{{#if calc}}
 		<form onsubmit="return false" oninput="time.value = Math.round((weight.valueAsNumber / {{calc.weight}}) * {{calc.mins}}) + ' min'">
 			<output name="time" for="weight">{{calc.mins}} min</output> for
